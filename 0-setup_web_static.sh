@@ -38,7 +38,7 @@ HOME_PAGE="<!DOCTYPE html>
 	<body>
 </html>
 "
-# shellcheck disable=SC2230
+# shellcheck disable=SC2230 
 if [[ "$(which nginx | grep -c nginx)" == '0' ]]; then
     apt-get update
     apt-get -y install nginx

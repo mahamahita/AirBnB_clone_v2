@@ -18,9 +18,9 @@ from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
-    """ Contains the functionality for the HBNB console"""
+    """ Contains all the functionality for the HBNB console"""
 
-    # determines prompt for interactive/non-interactive modes
+    # determines prompt for interactive and non-interactive modes
     prompt = '(hbnb) ' if sys.__stdin__.isatty() else ''
 
     classes = {
@@ -36,7 +36,7 @@ class HBNBCommand(cmd.Cmd):
             }
 
     def preloop(self):
-        """Prints if isatty is false"""
+        """Prints if isatty is false """
         if not sys.__stdin__.isatty():
             print('(hbnb)')
 
